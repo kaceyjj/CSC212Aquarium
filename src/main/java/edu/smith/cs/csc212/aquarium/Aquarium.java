@@ -40,7 +40,8 @@ public class Aquarium extends GFX {
 		// Don't change this here, edit the variables instead.
 		super(WIDTH, HEIGHT);
 	}
-
+	Fish fish1 = new Fish(Color.pink, 250, 250);
+	Fish nemo = new Fish(Color.red, 100, 100);
 	int fish1X = getWidth() + 100;
 	int fish2X = getWidth() + 300;
 
@@ -49,6 +50,10 @@ public class Aquarium extends GFX {
 		// Draw the "ocean" background.
 		g.setColor(Color.blue);
 		g.fillRect(0, 0, getWidth(), getHeight());
+		
+		// dream draw fish:
+		fish1.draw(g);
+		nemo.draw(g);
 
 		// Draw the fish!
 		DrawFish.facingLeft(g, Color.yellow, fish1X, 200);
